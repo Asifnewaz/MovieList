@@ -19,7 +19,6 @@ class MovieListViewModel {
     
     var movieList: [MovieListCellVM] {
         didSet {
-            print("movies : \(movieList[0])")
             self.delegate?.loadMovieListView()
         }
     }

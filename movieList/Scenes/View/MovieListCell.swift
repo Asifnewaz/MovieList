@@ -22,7 +22,7 @@ class MovieListCell: UITableViewCell {
     var eachCell:MovieListCellVM!{
         didSet {
             
-            let placeholderImage = UIImage(named: "movie_PlaceHolder")
+            let placeholderImage = UIImage(named: "placeholder")
             self.posterImageView.getImage(url: "\(URL.imageURL)\(eachCell.poster_path ?? "")", placeholderImage: placeholderImage) { (success) in
                         //   cell.bannerImageView.contentMode = .scaleAspectFill
                            

@@ -80,7 +80,6 @@
 				6C5F1D62202D311BE8F00A97 /* Pods-movieList.debug.xcconfig */,
 				F04E604E4ED167284A33BEEB /* Pods-movieList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -528,6 +527,7 @@
 				DEVELOPMENT_TEAM = B7LHH7P3C9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = movieList/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Movies";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -558,6 +558,7 @@
 				DEVELOPMENT_TEAM = B7LHH7P3C9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = movieList/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Movies";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

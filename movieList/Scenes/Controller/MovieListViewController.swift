@@ -8,14 +8,14 @@
 import UIKit
 
 class MovieListViewController: UIViewController {
-
+    
     @IBOutlet weak var movieListTableView: UITableView!
     
-    private(set) var tableViewDataSource: GenericDataSource<MovieListCell,MovieListCellVM>!
+    var tableViewDataSource: GenericDataSource<MovieListCell,MovieListCellVM>!
     var coordinator: MovieListVCCoordinator?
-    private(set) var viewModel = MovieListViewModel()
+    var viewModel = MovieListViewModel()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,29 +25,25 @@ class MovieListViewController: UIViewController {
     }
     
     private func initilizedMovieListDataSource(){
-
         self.tableViewDataSource = GenericDataSource.init(cellIdentifier: "MovieListCell", items:self.viewModel.movieList, configureCell: { (cell, vm,indexpath) in
             cell.eachCell = vm
         })
-    self.movieListTableView.dataSource = self.tableViewDataSource
-}
-
+        self.movieListTableView.dataSource = self.tableViewDataSource
+    }
+    
     
     func getMovieList() {
         self.viewModel.getMovieListData(resource: self.viewModel.CreateMovieListRequest())
     }
-
+    
 }
 
+//MARK: Movie List Delegate to update tableview
 extension MovieListViewController: MovieListViewModelDelegate {
     func loadMovieListView() {
         self.tableViewDataSource.updateItems(self.viewModel.movieList)
         DispatchQueue.main.async {
-            print("1111111")
             self.movieListTableView.reloadData()
         }
-        
     }
-    
-    
 }

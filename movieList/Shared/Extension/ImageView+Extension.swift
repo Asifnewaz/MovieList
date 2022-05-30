@@ -5,8 +5,8 @@
 //  Created by USER on 5/30/22.
 //
 
-import Foundation
 import UIKit
+import SDWebImage
 
 
 extension UIImageView {

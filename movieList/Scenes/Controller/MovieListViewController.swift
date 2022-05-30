@@ -10,6 +10,7 @@ import UIKit
 class MovieListViewController: UIViewController {
     
     @IBOutlet weak var movieListTableView: UITableView!
+    @IBOutlet weak var searchbar: UISearchBar!
     
     var tableViewDataSource: GenericDataSource<MovieListCell,MovieListCellVM>!
     var coordinator: MovieListVCCoordinator?
@@ -19,6 +20,7 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.searchbar.delegate = self
         self.viewModel.viewDidLoad(self)
         self.getMovieList()
         self.initilizedMovieListDataSource()
@@ -37,6 +39,15 @@ class MovieListViewController: UIViewController {
     }
     
 }
+
+//MARK: UISearchBar Delegate
+extension MovieListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel.movieList = searchText.isEmpty ? self.viewModel.movieFilteredList : self.viewModel.movieList.filter { $0.title?.contains(searchText) ?? false }
+        loadMovieListView()
+    }
+}
+
 
 //MARK: Movie List Delegate to update tableview
 extension MovieListViewController: MovieListViewModelDelegate {

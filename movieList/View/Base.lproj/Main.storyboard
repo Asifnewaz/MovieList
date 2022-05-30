@@ -38,8 +38,24 @@
                                     <constraint firstAttribute="height" constant="60" id="vrR-tB-Ydp"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEw-FO-cDe" userLabel="searchBar">
+                                <rect key="frame" x="0.0" y="104" width="414" height="44"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="search movies" translatesAutoresizingMaskIntoConstraints="NO" id="fQU-ll-ThP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fQU-ll-ThP" secondAttribute="trailing" id="7yq-rR-JSY"/>
+                                    <constraint firstItem="fQU-ll-ThP" firstAttribute="top" secondItem="CEw-FO-cDe" secondAttribute="top" id="9b3-ue-1Lg"/>
+                                    <constraint firstAttribute="height" constant="44" id="I2L-g8-2hE"/>
+                                    <constraint firstItem="fQU-ll-ThP" firstAttribute="leading" secondItem="CEw-FO-cDe" secondAttribute="leading" id="k1G-Vs-KFU"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5fF-nv-Ipf">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="195" id="DdY-Jl-FeW" customClass="MovieListCell" customModule="movieList" customModuleProvider="target">
@@ -123,23 +139,27 @@
                             <constraint firstItem="KPx-nk-tvO" firstAttribute="bottom" secondItem="5fF-nv-Ipf" secondAttribute="bottom" id="3dY-WM-eAP"/>
                             <constraint firstItem="5fF-nv-Ipf" firstAttribute="leading" secondItem="KPx-nk-tvO" secondAttribute="leading" id="8OM-lk-zrc"/>
                             <constraint firstItem="glZ-rm-3Hc" firstAttribute="top" secondItem="KPx-nk-tvO" secondAttribute="top" id="BHH-aX-U4t"/>
+                            <constraint firstItem="CEw-FO-cDe" firstAttribute="top" secondItem="Ca9-qy-ZCD" secondAttribute="bottom" id="FKD-Ad-UK3"/>
                             <constraint firstItem="glZ-rm-3Hc" firstAttribute="bottom" secondItem="Ca9-qy-ZCD" secondAttribute="bottom" id="Gv5-ZZ-2zc"/>
-                            <constraint firstItem="5fF-nv-Ipf" firstAttribute="top" secondItem="Ca9-qy-ZCD" secondAttribute="bottom" id="QM6-Lg-PbT"/>
                             <constraint firstItem="glZ-rm-3Hc" firstAttribute="leading" secondItem="KPx-nk-tvO" secondAttribute="leading" id="Xh7-pD-AFZ"/>
                             <constraint firstAttribute="top" secondItem="Ca9-qy-ZCD" secondAttribute="top" id="dg5-Xh-gyg"/>
                             <constraint firstAttribute="trailing" secondItem="Ca9-qy-ZCD" secondAttribute="trailing" id="exo-ku-2lN"/>
                             <constraint firstItem="Ca9-qy-ZCD" firstAttribute="leading" secondItem="DhG-UY-909" secondAttribute="leading" id="gFe-3c-e07"/>
+                            <constraint firstItem="CEw-FO-cDe" firstAttribute="trailing" secondItem="KPx-nk-tvO" secondAttribute="trailing" id="gno-aj-Khb"/>
                             <constraint firstItem="KPx-nk-tvO" firstAttribute="trailing" secondItem="glZ-rm-3Hc" secondAttribute="trailing" id="iFf-HM-fru"/>
+                            <constraint firstItem="CEw-FO-cDe" firstAttribute="leading" secondItem="KPx-nk-tvO" secondAttribute="leading" id="uVH-Xl-NRe"/>
                             <constraint firstItem="KPx-nk-tvO" firstAttribute="trailing" secondItem="5fF-nv-Ipf" secondAttribute="trailing" id="x4f-oJ-W16"/>
+                            <constraint firstItem="5fF-nv-Ipf" firstAttribute="top" secondItem="CEw-FO-cDe" secondAttribute="bottom" id="xuK-OT-owp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="movieListTableView" destination="5fF-nv-Ipf" id="nwe-9u-xpM"/>
+                        <outlet property="searchbar" destination="fQU-ll-ThP" id="GFG-Hr-9Hj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cb0-XN-oah" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="-153"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="-153.34821428571428"/>
         </scene>
     </scenes>
     <resources>

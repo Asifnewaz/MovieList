@@ -15,6 +15,8 @@ class MovieListViewModel {
     
     private(set) var delegate: MovieListViewModelDelegate?
     
+    var movieFilteredList: [MovieListCellVM] = []
+    
     var movieList: [MovieListCellVM] {
         didSet {
             print("movies : \(movieList[0])")
@@ -62,6 +64,7 @@ class MovieListViewModel {
                                     self?.movieList = movies.map({ (result) -> MovieListCellVM in
                                         return MovieListCellVM(title: result.title, overview: result.overview, poster_path: result.poster_path)
                                     })
+                                    self?.movieFilteredList = self?.movieList ?? []
                                 }
                                 break
                                 

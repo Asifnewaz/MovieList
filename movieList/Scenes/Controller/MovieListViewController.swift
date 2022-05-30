@@ -19,7 +19,7 @@ class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboardWhenTappedAround()
         self.searchbar.delegate = self
         self.viewModel.viewDidLoad(self)
         self.getMovieList()

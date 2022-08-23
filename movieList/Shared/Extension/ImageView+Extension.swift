@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+// Send PR 3
 // Send PR o Curr B
 // Test Pull Request github
 extension UIImageView {

@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+// Send PR o Curr B
 // Test Pull Request github
 extension UIImageView {
     func getImage(url: String, placeholderImage:  UIImage?, success:@escaping (_ _result : Any? ) -> Void,  failer:@escaping (_ _result : Any? ) -> Void) {
